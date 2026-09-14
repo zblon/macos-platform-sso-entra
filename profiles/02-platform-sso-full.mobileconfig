@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<!-- Extensible SSO Payload -->
+		<dict>
+			<key>PayloadType</key>
+			<string>com.apple.extensiblesso</string>
+			<key>PayloadIdentifier</key>
+			<string>com.company.sso.extensiblessoconfig</string>
+			<key>PayloadUUID</key>
+			<string>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PayloadDisplayName</key>
+			<string>Extensible SSO - Microsoft Entra ID</string>
+			<key>PayloadDescription</key>
+			<string>Configure Microsoft Enterprise SSO plug-in pour macOS</string>
+
+			<key>ExtensionIdentifier</key>
+			<string>com.microsoft.CompanyPortalMac.ssoextension</string>
+
+			<key>TeamIdentifier</key>
+			<string>UBF8T346G9</string>
+
+			<key>Type</key>
+			<string>Redirect</string>
+
+			<key>URLs</key>
+			<array>
+				<string>https://login.microsoftonline.com</string>
+				<string>https://login.microsoft.com</string>
+				<string>https://sts.windows.net</string>
+				<string>https://login.windows.net</string>
+			</array>
+
+			<key>ExtensionData</key>
+			<dict>
+				<!-- ========================================== -->
+				<!-- REMPLACER PAR VOTRE TENANT ID ENTRA ID     -->
+				<!-- ========================================== -->
+				<key>tenant_id</key>
+				<string>VOTRE-TENANT-ID-ICI</string>
+
+				<key>AppPrefixAllowList</key>
+				<string>com.microsoft.,com.apple.</string>
+
+				<key>browser_sso_interaction_enabled</key>
+				<integer>1</integer>
+
+				<key>disable_explicit_app_prompt</key>
+				<integer>1</integer>
+
+				<key>disable_explicit_app_prompt_and_autologin</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+
+		<!-- Platform SSO Payload -->
+		<dict>
+			<key>PayloadType</key>
+			<string>com.apple.extensiblesso</string>
+			<key>PayloadIdentifier</key>
+			<string>com.company.sso.platformssoconfig</string>
+			<key>PayloadUUID</key>
+			<string>B2C3D4E5-F6A7-8901-BCDE-F12345678901</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PayloadDisplayName</key>
+			<string>Platform SSO - Microsoft Entra ID</string>
+			<key>PayloadDescription</key>
+			<string>Configure Platform SSO avec synchronisation mot de passe</string>
+
+			<key>ExtensionIdentifier</key>
+			<string>com.microsoft.CompanyPortalMac.ssoextension</string>
+
+			<key>TeamIdentifier</key>
+			<string>UBF8T346G9</string>
+
+			<key>Type</key>
+			<string>Redirect</string>
+
+			<key>URLs</key>
+			<array>
+				<string>https://login.microsoftonline.com</string>
+				<string>https://login.microsoft.com</string>
+				<string>https://sts.windows.net</string>
+				<string>https://login.windows.net</string>
+			</array>
+
+			<!-- Platform SSO Configuration -->
+			<key>PlatformSSO</key>
+			<dict>
+				<key>AuthenticationMethod</key>
+				<string>Password</string>
+
+				<key>UseSharedDeviceKeys</key>
+				<false/>
+
+				<key>AccountDisplayName</key>
+				<string>Microsoft Entra ID</string>
+
+				<key>EnableAuthorization</key>
+				<true/>
+
+				<key>EnableCreateUserAtLogin</key>
+				<false/>
+
+				<key>NewUserAuthorizationMode</key>
+				<string>Standard</string>
+
+				<key>UserAuthorizationMode</key>
+				<string>Standard</string>
+
+				<key>TokenToUserMapping</key>
+				<dict>
+					<key>AccountName</key>
+					<string>preferred_username</string>
+					<key>FullName</key>
+					<string>name</string>
+				</dict>
+
+				<key>RegistrationToken</key>
+				<string>{{DEVICEREGISTRATION}}</string>
+			</dict>
+
+			<key>ExtensionData</key>
+			<dict>
+				<!-- ========================================== -->
+				<!-- REMPLACER PAR VOTRE TENANT ID ENTRA ID     -->
+				<!-- ========================================== -->
+				<key>tenant_id</key>
+				<string>VOTRE-TENANT-ID-ICI</string>
+			</dict>
+		</dict>
+	</array>
+
+	<!-- Profil global -->
+	<key>PayloadDisplayName</key>
+	<string>Platform SSO - Microsoft Entra ID</string>
+	<key>PayloadDescription</key>
+	<string>Configure Platform SSO et Enterprise SSO plug-in avec Microsoft Entra ID (methode Password)</string>
+	<key>PayloadIdentifier</key>
+	<string>com.company.platformsso.entraid</string>
+	<key>PayloadOrganization</key>
+	<string>IT Department</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>C3D4E5F6-A7B8-9012-CDEF-123456789012</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadRemovalDisallowed</key>
+	<true/>
+</dict>
+</plist>

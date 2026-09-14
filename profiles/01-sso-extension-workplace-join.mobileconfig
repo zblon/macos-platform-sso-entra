@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>PayloadType</key>
+  <string>Configuration</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+  <key>PayloadIdentifier</key>
+  <string>com.company.sso.extension.entra</string>
+  <key>PayloadUUID</key>
+  <string>DBCCB22E-3503-4344-B6A5-FA62604B13E6</string>
+  <key>PayloadDisplayName</key>
+  <string>Microsoft SSO Extension (Entra ID)</string>
+  <key>PayloadDescription</key>
+  <string>Déploie l'extension SSO Microsoft pour authentification silencieuse aux applications Entra ID (Microsoft 365, applications metier). Sans Platform SSO complet.</string>
+  <key>PayloadOrganization</key>
+  <string>IT Department</string>
+  <key>PayloadScope</key>
+  <string>System</string>
+  <key>PayloadRemovalDisallowed</key>
+  <false/>
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.extensiblesso</string>
+      <key>PayloadIdentifier</key>
+      <string>com.company.sso.extension.entra.payload</string>
+      <key>PayloadUUID</key>
+      <string>F39D26C4-011E-4BB4-8979-63A0C5C39226</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadDisplayName</key>
+      <string>Microsoft Enterprise SSO Extension</string>
+      <key>PayloadDescription</key>
+      <string>Extension SSO embarquée dans Company Portal.app, intercepte les flows OAuth Entra ID pour silent authentication.</string>
+
+      <key>ExtensionIdentifier</key>
+      <string>com.microsoft.CompanyPortalMac.ssoextension</string>
+      <key>TeamIdentifier</key>
+      <string>UBF8T346G9</string>
+      <key>Type</key>
+      <string>Redirect</string>
+
+      <key>URLs</key>
+      <array>
+        <string>https://login.microsoftonline.com</string>
+        <string>https://login.microsoft.com</string>
+        <string>https://sts.windows.net</string>
+        <string>https://login.partner.microsoftonline.cn</string>
+        <string>https://login.chinacloudapi.cn</string>
+        <string>https://login.microsoftonline.us</string>
+        <string>https://login-us.microsoftonline.com</string>
+      </array>
+
+      <key>ScreenLockedBehavior</key>
+      <string>Cancel</string>
+    </dict>
+  </array>
+</dict>
+</plist>
